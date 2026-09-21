@@ -2,26 +2,21 @@
 
 int main()
 {
-    int t,a,b,i;
+    int t, a, b;
 
-    scanf("%d",&t);
+    scanf("%d", &t);
 
     while(t > 0)
     {
-        scanf("%d %d",&a, &b);
+        scanf("%d %d", &a, &b);
 
-        i = 0;
+        if(a%b== 0)
+            printf("0\n");
+        else
+            printf("%d\n", b - (a % b));
 
-        while(a%b!= 0)
-        {
-            a++;
-            i++;
-        }
-
-        printf("%d\n",i);
-
-    t--;
+        t--;
     }
 
-return 0;
+    return 0;
 }
