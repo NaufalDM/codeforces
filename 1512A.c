@@ -42,6 +42,7 @@ int main()
         }
 
         printf("%d\n", ans);
+        t--;
     }
 
     return 0;
