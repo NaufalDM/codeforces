@@ -1,6 +1,6 @@
 #include<stdio.h>
 int main()
-
+	
 {
 	int tahun,lanjut,satuan,puluhan,ratusan,ribuan;
 	scanf("%d",&tahun);
