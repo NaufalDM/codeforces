@@ -1,28 +1,21 @@
 #include<stdio.h>
 int main()
 {
-	int t,a,b;
+	char a1[105];
+	char a2[105];
+	scanf("%s %s", a1, a2);
 	
-	scanf("%d",&t);
-	
-	while(t>0)
+	for(int i = 0; a1[i] != '\0' ; i++)
 	{
-		scanf("%d %d" , &a,&b);
-		if (a%b==0)
+		if(a1[i] != a2[i])
+		{
+			printf("1");
+		}
+		else 
 		{
 			printf("0");
 		}
-		else
-		{
-			for(int i=0;a%b!=0;i++)
-			{
-				if(a%b==0)
-				{
-					printf("%d", i);
-				}
-				a++;
-			}
-		}
 	}
-	return 0;
+	
+	printf("\n");
 }
