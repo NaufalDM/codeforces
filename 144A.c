@@ -1,35 +1,28 @@
-#include <stdio.h>
+#include<stdio.h>
+int main()
+{
+	int t, max = 0, min = 100, posmax = 0, posmin = 0;
+	scanf("%d", &t);
+	int an[t];
+	for(int i = 0; i<t ; i++)
+	{
+		scanf("%d", &an[i]);
+		if(an[i] > max)
+		{
+			max = an[i];
+			posmax = i;
+		}
+		if(an[i] <= min)
+		{
+			min = an[i];
+			posmin = i;
+		}
+	}
 
-int main() {
-    int n;
-    scanf("%d", &n);
-
-    int a;
-    scanf("%d", &a);
-
-    int max = a, min = a;
-    int posMax = 0, posMin = 0;
-
-    for (int i = 1; i < n; i++) {
-        scanf("%d", &a);
-
-        if (a > max) {
-            max = a;
-            posMax = i;
-        }
-
-        if (a <= min) {
-            min = a;
-            posMin = i;
-        }
-    }
-
-    int ans = posMax + (n - 1 - posMin);
-
-    if (posMax > posMin)
-        ans--;
-
-    printf("%d", ans);
-
-    return 0;
+	int total = posmax + t - posmin - 1;
+	if(posmin < posmax)
+	{
+		total--;
+	}
+	printf("%d", total);
 }
